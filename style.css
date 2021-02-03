@@ -348,4 +348,19 @@ body {
 
   }
 
-  
+  /*update start*/
+
+  .articleContainer {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .articleContainer p{
+    height: 100px;
+    border-bottom: solid thin rgba(128, 128, 128, 0.671);
+  }
+
+    /*update end*/
+
