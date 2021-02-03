@@ -364,5 +364,61 @@ body {
 
     /*update end*/
 
-/* Asel dropdown container styles */
+/* George footer styles */
 
+body #footer-main-box {
+  background-color: rgb(255,100,0);
+  /*position: fixed;*/
+  top: 20px;
+  bottom: 20px;
+  left: 0px;
+  right: 0px;
+  height: 350px; 
+}
+
+body #footer-box1 {
+  color: white;
+  /*position: fixed;*/
+  bottom: 310px;
+  left: 100px;
+}
+
+body #footer-box2 {
+  width: 260px;
+  height: 300px;
+  color: white;
+  background-color: rgb(48,48,48);
+  /*position: fixed;*/
+  bottom: 50px;
+  left: 100px;
+}
+
+body #footer-box3 {
+  width: 260px;
+  height: 300px;
+  color: white;
+  background-color: rgb(48,48,48);
+  /*position: fixed;*/
+  bottom: 50px;
+  left: 400px;
+}
+
+body #footer-box4 {
+  width: 260px;
+  height: 300px;
+  color: white;
+  background-color: rgb(48,48,48);
+  /*position: fixed;*/
+  bottom: 50px;
+  left: 700px;
+}
+
+body #footer-box5 {
+  width: 260px;
+  height: 300px;
+  color: white;
+  background-color: rgb(48,48,48);
+  /*position: fixed;*/
+  bottom: 50px;
+  left: 1000px;
+}
