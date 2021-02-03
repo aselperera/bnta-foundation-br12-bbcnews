@@ -1,0 +1,351 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+::-webkit-input-placeholder { color: black; }
+  :-moz-placeholder { color: black; }
+  ::-moz-placeholder { color: black; }
+  :-ms-input-placeholder { color: black; }
+  
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a.underlined:hover{
+    color: black;
+  }
+ /* changed both content and main max-width to 1200px from 1100px */
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  main {
+      margin: 0 auto;
+      max-width: 1200px;
+  }
+
+  /*///////// NAV /////////*/
+  nav a { display: block; }
+  nav a.underlined {
+    text-align: center;
+    border-bottom: 4px solid transparent;
+  }
+    
+  /*added padding to line 93 and 94*/
+  nav a.underlined:hover { border-bottom-color: #262626; text-decoration: none;}
+  nav #logo-menu li:nth-child(2) a.underlined:hover { border-bottom-color: #18b;}
+  nav #logo-menu li:nth-child(3) a.underlined:hover { border-bottom-color: #921;}
+  nav #logo-menu li:nth-child(4) a.underlined:hover { border-bottom-color: #fe1;}
+  nav #logo-menu li:nth-child(5) a.underlined:hover { border-bottom-color: #8ce;}
+  nav #logo-menu li:nth-child(6) a.underlined:hover { border-bottom-color: #ed3d7d;}
+  nav #primary-nav a.underlined:hover { border-bottom-color: white; padding-bottom: 24px;}
+  nav #sub-nav a.underlined:hover { border-bottom-color: #cc0101; padding-bottom: 3px;}
+  
+  nav #logo-menu {
+    border-bottom: 1px solid #ccc;
+  }
+  nav #logo-menu .content {
+    display: table;
+    width: 100%;
+  }
+  nav #logo-menu ul {
+    display: table-row;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  nav #logo-menu li {
+    display: table-cell;
+    vertical-align: top;
+    line-height: 40px;
+    border-right: 1px solid #ccc;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  nav #logo-menu .sign-in img {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  nav #logo-menu .search {
+    border-right: 0;
+  }
+  nav #logo-menu .logo { width: 1px; }
+  nav #logo-menu .search { width: 220px; }
+  nav #logo-menu .search .search-container {
+    margin: 8px;
+    height: 24px;
+    background: #e4e4e4;
+  }
+  nav #logo-menu .search .search-container input,
+  nav #logo-menu .search .search-container img { vertical-align: top; }
+  nav #logo-menu .search .search-container input {
+    background: transparent;
+    border: none;
+    width: 167px;
+    padding: 0 0 0 5px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+  nav #logo-menu .search .search-container .search-button {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+  }
+  nav #logo-menu .search .search-container .search-button img {
+    margin-top: 4px;
+    vertical-align: top;
+  }
+  nav #logo-menu .logo img {
+    display: inline-block;
+    margin: 8px;
+    vertical-align: top;
+  }
+  nav #logo-menu .sign-in { width: 170px; }
+  nav #logo-menu .sign-in a.underlined { text-align: left; }
+  nav #logo-menu li a.underlined {
+    height: 36px;
+    padding: 0 15px;
+  }
+  
+  nav .red-header { background-color: #cc0101;}
+  
+  nav #department,
+  nav #primary-nav { color: white; }
+  
+  nav #department a {
+    color: white;
+    display: inline-block;
+  }
+  nav #department h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 3px 0;
+    font-size: 2.8em;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  
+  nav #primary-nav {
+    border-top: 1px solid rgba(255,255,255,0.3);
+  }
+  nav #primary-nav .content {
+    display: table;
+    width: 100%;
+  }
+  nav #primary-nav ul {
+    display: table-row;
+    height: 36px;
+  }
+  nav #primary-nav li {
+    display: table-cell;
+    position: relative;
+  }
+
+  nav #primary-nav a {
+    font-size: 13px;  /* changed the font size here*/
+    color: white;
+    padding: 8px 12px;
+    max-height: 16px;
+  }
+  nav #primary-nav ul li a.active {
+    border-bottom-color: clear; /* changed border bottom colour */
+  } 
+  
+  nav #primary-nav ul li a:hover{ border-bottom-color: 4px solid white;}
+
+  nav #sub-nav ul {
+    margin: 6px 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  nav #sub-nav ul li {
+    position: relative;
+    display: inline-block;
+  }
+  nav #sub-nav ul li:after {
+    content: '';
+    width: 1px;
+    height: 15px;
+    background-color: rgba(0,0,0,0.15);
+    position: absolute;
+    top: 5px;
+    right: 0px;
+  }
+  nav #sub-nav ul li:last-child:after { content: none; }
+  nav #sub-nav ul li a {
+    font-size: 15px;
+    padding: 3px 12px;
+  }
+  /*///////// End NAV ///////// */
+
+  main #main-box {
+    width: 625px;
+    height: 250px;
+    background-color: grey;
+  }
+
+  main #box1 {
+    width: 195px;
+    height: 250px;
+    background-color: grey;
+    position: fixed;
+    bottom: 319.5px;
+    left: 845px;
+  }
+
+  main #box2 {
+    width: 195px;
+    height: 250px;
+    background-color: grey;
+    position: fixed;
+    bottom: 50px;
+  }
+
+  main #box3 {
+    width: 195px;
+    height: 250px;
+    background-color: grey;
+    position: fixed;
+    bottom: 50px;
+    right: 887px;
+  }
+
+  main #box4 {
+    width: 195px;
+    height: 250px;
+    background-color: grey;
+    position: fixed;
+    bottom: 50px;
+    right: 672px;
+  }
+
+  main #box5 {
+    width: 195px;
+    height: 250px;
+    background-color: grey;
+    position: fixed;
+    bottom: 50px;
+    right: 455px;
+  }
+
+  h2 {
+    overflow: hidden;
+    text-align: left;
+    /*text-indent: 40px;*/
+  }
+  
+  h2:before,
+  h2:after {
+    background-color: rgba(0, 0, 0, 0.548);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 70%;
+  }
+  
+  h2:before {
+    right: 0.5em;
+    margin-left: -70%;
+  }
+  
+  h2:after {
+    left: 0.5em;
+    /*margin-right: -50%;*/
+  }
+
+  a {
+    color: black;
+    font-weight: bold;
+  }
+
+  .sLogos{
+    width: 64px;
+    height: 64px;
+  }
+
+  .sLogos:hover{
+    filter: opacity(70%);
+  }
+
+  .newsLogos{
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%);
+  }
+
+  .articleImage{
+    max-width: 250px;
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+
+  .articleTitle{
+    padding-left: 8px;
+    color: #262626;
+    font-size: large;
+  }
+
+
+  #articleFrame p{
+    padding-left: 5px;
+    color: #262626;
+    font-size: large;
+
+  }
+
+  
