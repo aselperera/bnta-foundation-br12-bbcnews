@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="libs/jquery.min.js"></script>
+<script src="script.js"></script>
 <style>
   a {
     color: black;
@@ -30,7 +31,12 @@
           <li><a class="underlined" href="#">iPlayer</a></li>
           <li><a class="underlined" href="#">TV</a></li>
           <li><a class="underlined" href="#">Radio</a></li>
-          <li><a class="underlined" href="#">More</a></li>
+
+          <li class="dropdown">
+            <button class="dropdown__button" onclick="dropdownToggle()">More</button>
+          </li>
+
+
           <li class="search">
             <div class="search-container">
               <input type="text" placeholder="Search">
@@ -40,6 +46,26 @@
         </ul>
       </div>
     </div>
+
+    <div class="dropdown__content" id="dropdown-top">
+      <!-- May need to use <ul> to do this? -->
+      <!-- <a href="#">CBeebies</a> -->
+
+      <div class="row">
+        <div class="co\l-sm-2"><b>MORE</b></div>
+        <div class="col-sm-2">CBeebies</div>
+        <div class="col-sm-2">Food</div>
+        <div class="col-sm-2">Bitesize</div>
+        <div class="col-sm-2">Arts</div>
+        <div class="col-sm-2">Taster</div>
+        <div class="col-sm-2"></div> <!-- Empty cell below MORE -->
+        <div class="col-sm-2">Local</div>
+        <div class="col-sm-2">Three</div>
+      </div>
+    
+    </div>
+
+
   
     <div class="red-header">
       <div id="department">
@@ -134,7 +160,7 @@
     <!--update end-->
 
     <!-- Footer -->
-    
+
     <div class="social">
       <h2> Find us here </h2>
 
