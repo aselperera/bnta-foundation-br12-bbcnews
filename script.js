@@ -32,14 +32,36 @@ function dropdownToggle() {
     }
 }
 
-// Datetime
+// Load functions
+
+window.onload = function() {
+    setRandomHour();
+    setRandomMinutes();
+    setDateTime();
+    dropdownToggle(); // Have to set to open on login otherwise need to click it twice to open the first time
+}
+
+
+// Date & time
 
 function setDateTime() {
 
+    var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
     let today = new Date();
-    let date = today.getDay() + "-" + today.getMonth() + "-" + today.getFullYear(); 
-    let time = today.getHours() + ":" + today.getMinutes();
-    let dateTime = date + " " + time;
+    let day = today.getDay();
+    let dayWeek = days[day];
+    let month = months[today.getMonth()];
+    let year = today.getFullYear();
+    let minutes = today.getMinutes();
+
+    if (minutes < 10) {
+        minutes = "0"+minutes;
+    }
+
+    let time = today.getHours() + ":" + minutes;
+    let dateTime = dayWeek + ", " + month + " " + day + ", " + year + " - " + time;
 
     let dateTimeText = document.getElementById("datetime-text");
     dateTimeText.innerHTML = dateTime;
@@ -47,23 +69,34 @@ function setDateTime() {
     setInterval(() => {
         
         let today = new Date();
-        let date = today.getDay() + "-" + today.getMonth() + "-" + today.getFullYear(); 
-        let time = today.getHours() + ":" + today.getMinutes();
-        let dateTime = date + " " + time;
+        let day = today.getDay();
+        let dayWeek = days[day];
+        let month = months[today.getMonth()];
+        let year = today.getFullYear();
+        let minutes = today.getMinutes();
+        
+        if (minutes < 10) {
+            minutes = "0"+minutes;
+        }
+
+        let time = today.getHours() + ":" + minutes;
+        let dateTime = dayWeek + ", " + month + " " + day + ", " + year + " - " + time;
 
         let dateTimeText = document.getElementById("datetime-text");
         dateTimeText.innerHTML = dateTime;
 
-    }, 10000);
+    }, 5000);
 
 }
 
 // Scroll to top button
 
-window.onscroll = function() {scrollButtonAppear()};
+window.onscroll = function() {
+    scrollButtonAppear()
+};
 
 function scrollButtonAppear() {
-    document.getElementById("scroll-top-button").style.display = "block";
+    document.getElementById("scroll-to-top-button").style.display = "block";
 }
 
 function scrollToTop() {
@@ -71,12 +104,7 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera
 }
 
-// Set random hours for when articles were written
-
-window.onload = function() {
-    setRandomHour();
-    setRandomMinutes();
-}
+// Set random times for when articles were written
 
 function setRandomHour() {
     var hoursList = document.getElementsByClassName("random-hour");
@@ -91,7 +119,7 @@ function setRandomMinutes() {
     var minutesList = document.getElementsByClassName("random-minutes");
 
     for (let i = 0; i < minutesList.length; i++) {
-        var randomMinutes = Math.floor(Math.random() * 60)+1; // Returns random number between 1 and 9
+        var randomMinutes = Math.floor(Math.random() * 60)+1; // Returns random number between 1 and 60
         minutesList[i].innerHTML = randomMinutes+"m";
     }
 }

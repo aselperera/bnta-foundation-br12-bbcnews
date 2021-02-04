@@ -507,3 +507,15 @@ body #footer-box5 {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+/* Asel button */
+
+#scroll-to-top-button{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+}
