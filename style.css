@@ -451,7 +451,7 @@ body #footer-box5 {
   display: none;
 }
 
-.dropdown__content-options:hover, a {
+.dropdown__content-options:hover {
   background-color: rgb(68, 68, 68);
   color: white;
   text-decoration: none;
@@ -522,8 +522,6 @@ body #footer-box5 {
 
 #live-summary {
   background-color:rgba(185, 183, 177, 0.199);
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   border-radius: 10px;
 }
