@@ -334,8 +334,21 @@ body {
     padding-bottom: 10px;
   }
 
+  .articleImage2{
+    max-width: 454px;           /* edited the max-width and added max-height here */
+    max-height: 350px;
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+
+  .articleImage3{
+    max-width: 220px;
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+
   .articleTitle{
-    padding-left: 8px;
+    padding-left: 5px;
     color: #262626;
     font-size: large;
   }
@@ -476,4 +489,10 @@ body #footer-box5 {
   height: 50px;
   list-style-type: none;
   top:50%;
+}
+
+/* Zeynep & Pedrum change */
+
+.list-big-box{     /* added class style here */
+  left: 35px;
 }
