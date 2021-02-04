@@ -367,9 +367,10 @@ body {
 /* George footer styles */
 
 body #footer-main-box {
-  background-color: rgb(255,100,0);
+  /*background-color: #ff6400;*/
+  background: linear-gradient(#ff6400,#e66465);
   /*position: fixed;*/
-  top: 20px;
+  top: 30px;
   bottom: 30px;
   left: 0px;
   right: 0px;
