@@ -71,44 +71,27 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera
 }
 
-// Retrieve weather
+// Set random hours for when articles were written
 
-/*
-function getWeather() {
-    var xhttp = new XMLHttpRequest();
-    document.getElementById("weather-button").innerHTML = this.responseText;
-
-    const api_host = "https://www.metaweather.com/44418/";
-    xhttp.open("GET", "https://cors-anywhere.herokuapp.com/" + api_host, true);
-    xhttp.send();
-    
-}
-*/
-
-function weatherBalloon( cityID ) {
-    var key = '02fda04ac7b274cbed337f6b2945734b';
-    fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
-    .then(function(resp) { return resp.json() }) // Convert data to json
-    .then(function(data) {
-      console.log(data);
-    })
-    .catch(function() {
-      // catch any errors
-    });
-}
-  
 window.onload = function() {
-    weatherBalloon( 6167865 );
+    setRandomHour();
+    setRandomMinutes();
 }
 
-window.addEventListener("load", () => {
-    let lat;
-    let long;
+function setRandomHour() {
+    var hoursList = document.getElementsByClassName("random-hour");
 
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(position => {
-            long = position.coords.longitude;
-            lat = position.coords.latitude;
-        })
+    for (let i = 0; i < hoursList.length; i++) {
+        var randomHour = Math.floor(Math.random() * 9)+1; // Returns random number between 1 and 9
+        hoursList[i].innerHTML = randomHour+"h";
     }
-});
+}
+
+function setRandomMinutes() {
+    var minutesList = document.getElementsByClassName("random-minutes");
+
+    for (let i = 0; i < minutesList.length; i++) {
+        var randomMinutes = Math.floor(Math.random() * 60)+1; // Returns random number between 1 and 9
+        minutesList[i].innerHTML = randomMinutes+"m";
+    }
+}
