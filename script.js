@@ -1,4 +1,4 @@
-// Load functions
+// Load functions when the page loads - does slow it down unfortunately
 
 window.onload = function() {
     setRandomHour();
