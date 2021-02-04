@@ -437,3 +437,15 @@ body #footer-box5 {
 .dropdown__content-options:hover {
   background-color: black;
 }
+
+/* Asel scroll to top button */
+
+#scroll-top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: red;
+  color: white;
+  border: none;
+}

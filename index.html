@@ -9,7 +9,7 @@
   <link rel="icon" href="https://news.files.bbci.co.uk/include/vjassets/img/bbcnewsicon256x256.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- Bootstrap -->
-  <script src="libs/jquery.min.js"></script> <!-- What is this for? -->
+  <!-- <script src="libs/jquery.min.js"></script> -->
   <script src="script.js"></script>
 
   <!-- Move to external CSS -->
@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body onload="setDateTime()">
 
   <nav>
       <div id="logo-menu">
@@ -125,7 +125,7 @@
   <main>
       <div id=main-box>
           <div class="content">
-              <p>hello world</p>
+              <p id="datetime-text">hello world</p>
           </div>
       </div>
 
@@ -275,6 +275,10 @@
       </div> <!-- End of orange box -->
 
       <!-- End of George footer -->
+
+      <!-- Asel scroll to top button -->
+
+      <button onclick="scrollToTop()" id="scroll-top-button">Top</button>
 
   </main>
 
