@@ -519,3 +519,7 @@ body #footer-box5 {
   padding: 15px;
   border-radius: 10px;
 }
+
+#live-summary {
+  background-color:rgba(185, 183, 177, 0.199);
+}
