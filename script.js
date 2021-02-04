@@ -1,24 +1,12 @@
-/*
-$(document).ready(function(){
-    var blink = document.getElementById.apply("blink-text");
-    setInterval(function(){
-        blink.style.display = (blink.style.display == 'none' ? '' : 'none');
-    }, 1000);
+// Load functions
 
-})(jQuery);
-*/
-
-// Temporarily disabled 
-
-/*
-window.addEventListener("load", function(){
-    var blink = document.getElementById("blink-text");
-    setInterval(function(){
-        blink.style.display = (blink.style.display == 'none' ? '' : 'none');
-    }, 500);
-
-}, false);
-*/
+window.onload = function() {
+    setRandomHour();
+    setRandomMinutes();
+    setDateTime();
+    dropdownToggle(); // Have to set to open on login otherwise need to click it twice to open the first time
+    blink();
+}
 
 // Open top dropdown menu code
 
@@ -32,15 +20,15 @@ function dropdownToggle() {
     }
 }
 
-// Load functions
+// Live summary blink
 
-window.onload = function() {
-    setRandomHour();
-    setRandomMinutes();
-    setDateTime();
-    dropdownToggle(); // Have to set to open on login otherwise need to click it twice to open the first time
+function blink() {
+    var blinkText = document.getElementById("blink-text");
+    setInterval(function(){
+        blinkText.style.visibility = (blinkText.style.visibility == 'hidden' ? 'visible' : 'hidden');
+    }, 500);
+
 }
-
 
 // Date & time
 
@@ -51,7 +39,7 @@ function setDateTime() {
 
     let today = new Date();
     let day = today.getDay();
-    let dayWeek = days[day];
+    let dayWeek = days[day-1];
     let month = months[today.getMonth()];
     let year = today.getFullYear();
     let minutes = today.getMinutes();
@@ -70,7 +58,7 @@ function setDateTime() {
         
         let today = new Date();
         let day = today.getDay();
-        let dayWeek = days[day];
+        let dayWeek = days[day-1];
         let month = months[today.getMonth()];
         let year = today.getFullYear();
         let minutes = today.getMinutes();
