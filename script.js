@@ -1,11 +1,11 @@
 // Load functions when the page loads - does slow it down unfortunately
 
 window.onload = function() {
-    setRandomHour();
-    setRandomMinutes();
-    setDateTime();
     dropdownToggle(); // Have to set to open on login otherwise need to click it twice to open the first time
     blink();
+    setDateTime();
+    setRandomHour();
+    setRandomMinutes();
 }
 
 // Open top dropdown menu code
@@ -25,8 +25,8 @@ function dropdownToggle() {
 function blink() {
     var blinkText = document.getElementById("blink-text");
     setInterval(function(){
-        blinkText.style.visibility = (blinkText.style.visibility == 'hidden' ? 'visible' : 'hidden');
-    }, 500);
+        blinkText.style.visibility = (blinkText.style.visibility == 'hidden' ? 'visible' : 'hidden'); // Use visibility instead of display so it always takes up space
+    }, 500); // 0.5 seconds
 
 }
 
@@ -73,12 +73,13 @@ function setDateTime() {
         let dateTimeText = document.getElementById("datetime-text");
         dateTimeText.innerHTML = dateTime;
 
-    }, 5000);
+    }, 5000); // Update time every 5 seconds
 
 }
 
 // Scroll to top button
 
+// Only appear after the user has scrolled
 window.onscroll = function() {
     scrollButtonAppear()
 };

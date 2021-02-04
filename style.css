@@ -518,6 +518,8 @@ body #footer-box5 {
   border: none;
   padding: 15px;
   border-radius: 10px;
+  background-color: #cc0100;
+  color: white;
 }
 
 #live-summary {
