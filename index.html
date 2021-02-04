@@ -9,7 +9,7 @@
   <link rel="icon" href="https://news.files.bbci.co.uk/include/vjassets/img/bbcnewsicon256x256.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- Bootstrap -->
-  <!-- <script src="libs/jquery.min.js"></script> -->
+  <script src="libs/jquery.min.js"></script> <!-- What is this for? -->
   <script src="script.js"></script>
 
   <!-- Move to external CSS -->
@@ -21,7 +21,7 @@
 
 </head>
 
-<body onload="setDateTime()">
+<body>
 
   <nav>
       <div id="logo-menu">
@@ -125,7 +125,7 @@
   <main>
       <div id=main-box>
           <div class="content">
-              <p id="datetime-text">hello world</p>
+              <p>hello world</p>
           </div>
       </div>
 
@@ -209,9 +209,19 @@
 
       <br>
 
-      <!-- George footer -->
+      <!--George's footer was here-->
 
-      <div id=footer-main-box>
+  </main>
+
+  <!--George's footer was moved here to its own section in order to bypass <main> margin restrictions-->
+
+  <orange-footer>
+    <!-- George footer -->
+
+    <div id=footer-main-box>
+
+      <main>    <!--main was added here to constrict content to page margins but the orange bit is out-->
+        
         <div class="footer-content"></div> <!-- this class isn't present in CSS; remove -->
 
         <div id="footer-box1">
@@ -269,18 +279,14 @@
               </a>
             </div>
           </div>
-
         </div> <!-- End of row -->
+      </main>
 
-      </div> <!-- End of orange box -->
+    </div> <!-- End of orange box -->
 
-      <!-- End of George footer -->
+    <!-- End of George footer -->
 
-      <!-- Asel scroll to top button -->
-
-      <button onclick="scrollToTop()" id="scroll-top-button">Top</button>
-
-  </main>
+  </orange-footer>
 
 </body>
 
