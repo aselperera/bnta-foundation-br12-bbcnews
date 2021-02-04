@@ -422,3 +422,18 @@ body #footer-box5 {
   bottom: 50px;
   left: 1000px;
 }
+
+/* Asel dropdown button */
+
+.dropdown__button {
+  background-color: transparent;
+  border: none;
+}
+
+.dropdown__content {
+  display: none;
+}
+
+.dropdown__content-options:hover {
+  background-color: black;
+}

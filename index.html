@@ -1,272 +1,283 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="libs/jquery.min.js"></script>
-<script src="script.js"></script>
-<style>
-  a {
-    color: black;
-  }
+<!-- BBC News Replica by Breakout Room 12 -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home - BBC News</title>
+  <link rel="icon" href="https://news.files.bbci.co.uk/include/vjassets/img/bbcnewsicon256x256.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- Bootstrap -->
+  <script src="libs/jquery.min.js"></script> <!-- What is this for? -->
+  <script src="script.js"></script>
+
+  <!-- Move to external CSS -->
+  <style>
+    a {
+      color: black;
+    }
   </style>
 
+</head>
+
 <body>
-<nav>
-    <div id="logo-menu">
-      <div class="content" style="color: black";> <!--edited style here ________________________________________-->
-        <ul>
-          <li class="logo">
-            <a href="#">
-              <img src="https://static.bbci.co.uk/frameworks/barlesque/2.83.4/orb/4/img/bbc-blocks-dark.png" alt="BBC">
-            </a>
-          </li>
-          <li class="sign-in">
-            <a class="underlined" href="#">
-              <span>Sign in</span>
-            </a>
-          </li>
-          <li><a class="underlined" href="#">News</a></li>
-          <li><a class="underlined" href="#">Sport</a></li>
-          <li><a class="underlined" href="#">Weather</a></li>
-          <li><a class="underlined" href="#">iPlayer</a></li>
-          <li><a class="underlined" href="#">TV</a></li>
-          <li><a class="underlined" href="#">Radio</a></li>
 
-          <li class="dropdown">
-            <button class="dropdown__button" onclick="dropdownToggle()">More</button>
-          </li>
-
-
-          <li class="search">
-            <div class="search-container">
-              <input type="text" placeholder="Search">
-              <a class="search-button" href="#"></a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="dropdown__content" id="dropdown-top">
-      <!-- May need to use <ul> to do this? -->
-      <!-- <a href="#">CBeebies</a> -->
-
-      <div class="row">
-        <div class="co\l-sm-2"><b>MORE</b></div>
-        <div class="col-sm-2">CBeebies</div>
-        <div class="col-sm-2">Food</div>
-        <div class="col-sm-2">Bitesize</div>
-        <div class="col-sm-2">Arts</div>
-        <div class="col-sm-2">Taster</div>
-        <div class="col-sm-2"></div> <!-- Empty cell below MORE -->
-        <div class="col-sm-2">Local</div>
-        <div class="col-sm-2">Three</div>
-      </div>
-    
-    </div>
-
-
-  
-    <div class="red-header">
-      <div id="department">
-        <div class="content">
-          <a href="#"><h1>News</h1></a>
-        </div>
-      </div>
-  
-      <div id="primary-nav">
-        <div class="content">
+  <nav>
+      <div id="logo-menu">
+        <div class="content" style="color: black";> <!--edited style here ________________________________________-->
           <ul>
-            <li><a class="underlined active" href="#"><span>Home</span></a></li>
-            <li><a class="underlined" href="#">Brexit</a></li>
-            <li><a class="underlined" href="#">Coronavirus</a></li>
-            <li><a class="underlined" href="#">UK</a></li>
-            <li><a class="underlined" href="#">World</a></li>
-            <li><a class="underlined" href="#">Business</a></li>
-            <li><a class="underlined" href="#">Politics</a></li>
-            <li><a class="underlined" href="#">Tech</a></li>
-            <li><a class="underlined" href="#">Science</a></li>
-            <li><a class="underlined" href="#">Health</a></li>
-            <li><a class="underlined" href="#">Family &amp; Education</a></li>
-            <li><a class="underlined" href="#">Entertainment &amp; Arts</a></li>
-            <li><a class="underlined" href="#">Stories</a></li>
-            <li><a class="underlined" href="#">In Pictures</a></li>
-            <li><a class="underlined" href="#">More</a></li>
+            <li class="logo">
+              <a href="#">
+                <img src="https://static.bbci.co.uk/frameworks/barlesque/2.83.4/orb/4/img/bbc-blocks-dark.png" alt="BBC">
+              </a>
+            </li>
+            <li class="sign-in">
+              <a class="underlined" href="#">
+                <span>Sign in</span>
+              </a>
+            </li>
+            <li><a class="underlined" href="#">News</a></li>
+            <li><a class="underlined" href="#">Sport</a></li>
+            <li><a class="underlined" href="#">Weather</a></li>
+            <li><a class="underlined" href="#">iPlayer</a></li>
+            <li><a class="underlined" href="#">TV</a></li>
+            <li><a class="underlined" href="#">Radio</a></li>
+
+            <li class="dropdown">
+                <button class="dropdown__button" onclick="dropdownToggle()">More</button>
+            </li>
+
+
+            <li class="search">
+              <div class="search-container">
+                <input type="text" placeholder="Search">
+                <a class="search-button" href="#"></a>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
-    </div>
-  
-    <div id="sub-nav">
-      <div class="content">
-        <ul>
-          <li><a class="underlined" href="#">England</a></li>
-          <li><a class="underlined" href="#">N. Ireland</a></li>
-          <li><a class="underlined" href="#">Scotland</a></li>
-          <li><a class="underlined" href="#">Alba</a></li>
-          <li><a class="underlined" href="#">Wales</a></li>
-          <li><a class="underlined" href="#">Cymru</a></li>
-        </ul>
-      </div>
-    </div>
-</nav>
-  
-<main>
-    <div id=main-box>
-        <div class="content">
-            <p>hello world</p>
-        </div>
-    </div>
 
-    <hr/>
+      <div class="dropdown__content" id="dropdown-top">
+        <!-- May need to use <ul> to do this? -->
+        <!-- <a href="#">CBeebies</a> -->
 
-
-
-    <!-- Coronavirus explained -->
-
-    <!--update here-->
-    <div id="articleFrame">
-      <a href=""><h2>Coronavirus explained</h2>
-      <div class="row">
-        <div class="col-sm-3">
-          <a href="">
-          <img class="articleImage" src="https://ichef.bbci.co.uk/news/240/cpsprodpb/244F/production/_116159290_index_mass_testing_976-nc.png" alt="placeholder">
-          <p>Which areas will have mass testing for Covid variant?</p>
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="">
-            <img class="articleImage" src="https://ichef.bbci.co.uk/news/240/cpsprodpb/7155/production/_114931092_index_lockdown_lookup_v2_b_976.png" alt="placeholder">
-            <p>Postcode check: Find out the rules where you live</p>
-            </a>
-        </div>
-
-        
-        <div class="col-sm-3">
-          <a href="">
-            <img class="articleImage" src="https://ichef.bbci.co.uk/news/240/cpsprodpb/164F9/production/_112558319_index_schools_reopening_976-1.png" alt="placeholder">
-            <p>How soon will children return to school?</p>
-            </a>
-        </div>
-        <div class="col-sm-3">
-          <div class="articleContainer">
-            <p><a href="">How effective is the Oxford vaccine?</a></p>
-            <p style="border-bottom:white"><a href="">How is the BBC helping home-schooling families?</a></p> 
-          </div>
-        </div>
-      </div>
-      <br>
-    </div>
-    <!--update end-->
-
-    <!-- Footer -->
-
-    <div class="social">
-      <h2> Find us here </h2>
-
-      <div id = "s-box">
         <div class="row">
-          <div class="col-sm-6">
-            <br>
-            <div class="col-sm-2">
-              <img class="sLogos" src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="twitter">
-            </div>
-            <div class="col-sm-2">
-              <img class="sLogos" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTImj5adg1sNvD0iCEQcjIGr-CZGuiX1or61w&usqp=CAU" alt="">
-            </div>
-            <div class="col-sm-2">
-              <img class="sLogos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="insta">
-            </div>
+          <div class="col-sm-2"><b>MORE</b></div>
+          <div class="col-sm-2">
+            <a class="dropdown__content-options">Cbeebies</a> <!-- Remove underline for link -->
           </div>
-          <div class="col-sm-3"> 
-             <h3><span><img class="newsLogos" src="http://cdn.onlinewebfonts.com/svg/img_64214.png" alt="news app logo"></span> | NEWS DAILY</h3>
-            <p><a>Get news from the BBC in your inbox each weekday morning</a></p>
-            </a>
-            <br>
-            <p>Email us at <a>haveyoursay@bbc.co.uk</a></p>
-            <p>Send an SMS or MMS to <a>61124</a></p>
-          </div>
-          <div class="col-sm-3"> 
-            <h3><span><img class="newsLogos" src="https://image.flaticon.com/icons/png/512/65/65680.png" alt="news app logo"></span> | NEWS APP</h3>
-            <p><a> Find out more about our BBC News App</a></p>
-            <br>
-            <p>Follow <a>Your Say on Twitter</a></p>
-            <p><a>Why you can trust BBC News</a></p>
-          </div>
+          <div class="col-sm-2">Food</div>
+          <div class="col-sm-2">Bitesize</div>
+          <div class="col-sm-2">Arts</div>
+          <div class="col-sm-2">Taster</div>
         </div>
-    </div>
-
-    <br>
-
-    <!-- George footer -->
-
-    <div id=footer-main-box>
-      <div class="footer-content"></div> <!-- this class isn't present in CSS; remove -->
-
-      <div id="footer-box1">
-        <div class="footer-content">
-            <h3 style="font-size: 20pt;">Lockdown Learning</h3>
-        </div>
+      
       </div>
 
-      <div class="row">
-
-        <div class="col-sm-3">
-          <div id="footer-box2">
-            <a style="text-decoration:none; color: white;"  href="https://www.bbc.co.uk/iplayer/group/p093cv85?xtor=CS8-1000-[Discovery_Cards]-[Multi_Site]-[SL02]-[PS_IPLAYER~N~~P_LockdownLearning]" target="_blank">
-              <div class="footer-content">
-                  <img class="footer-image footer-headline" src="https://ichef.bbci.co.uk/images/ic/272x153/p07jbxwv.jpg" alt="Article image" width="260px" height="150px">
-                  <h3 style="max-width: 195px; margin-bottom: 40px; margin-top: 2px;">Lessons to bring home schooling to life</h3>
-                  <p style="max-width: 195px; font-size: 11pt; margin-top: 0px; color: silver;">BBC IPLAYER</p>
-              </div>
-            </a> 
+      <div class="red-header">
+        <div id="department">
+          <div class="content">
+            <a href="#"><h1>News</h1></a>
           </div>
         </div>
+    
+        <div id="primary-nav">
+          <div class="content">
+            <ul>
+              <li><a class="underlined active" href="#"><span>Home</span></a></li>
+              <li><a class="underlined" href="#">Brexit</a></li>
+              <li><a class="underlined" href="#">Coronavirus</a></li>
+              <li><a class="underlined" href="#">UK</a></li>
+              <li><a class="underlined" href="#">World</a></li>
+              <li><a class="underlined" href="#">Business</a></li>
+              <li><a class="underlined" href="#">Politics</a></li>
+              <li><a class="underlined" href="#">Tech</a></li>
+              <li><a class="underlined" href="#">Science</a></li>
+              <li><a class="underlined" href="#">Health</a></li>
+              <li><a class="underlined" href="#">Family &amp; Education</a></li>
+              <li><a class="underlined" href="#">Entertainment &amp; Arts</a></li>
+              <li><a class="underlined" href="#">Stories</a></li>
+              <li><a class="underlined" href="#">In Pictures</a></li>
 
-        <div class="col-sm-3">
-          <div id="footer-box3">
-            <a style="text-decoration:none; color: white;"  href="https://www.bbc.co.uk/iplayer/episode/m000rqwl/workout-the-wright-way-series-1-episode-1-muscle-movers-week-1?xtor=CS8-1000-[Discovery_Cards]-[Multi_Site]-[SL02]-[PS_IPLAYER~N~~P_Workoutthewrightway_ep1]" target="_blank">
-              <div class="footer-content">
-                  <img class="footer-image footer-headline" src="https://ichef.bbci.co.uk/images/ic/704xn/p095hgm8.png" alt="Article image" width="260px" height="150px">
-                  <h3 style="max-width: 195px; margin-bottom: 40px; margin-top: 2px;">Get fit and Workout the Wright way!</h3>
-                  <p style="max-width: 195px; font-size: 11pt; margin-top: 0px; color: silver;">BBC IPLAYER</p>
-              </div>
+              <li><a class="underlined" href="#">More</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div id="sub-nav">
+        <div class="content">
+          <ul>
+            <li><a class="underlined" href="#">England</a></li>
+            <li><a class="underlined" href="#">N. Ireland</a></li>
+            <li><a class="underlined" href="#">Scotland</a></li>
+            <li><a class="underlined" href="#">Alba</a></li>
+            <li><a class="underlined" href="#">Wales</a></li>
+            <li><a class="underlined" href="#">Cymru</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+  
+  <main>
+      <div id=main-box>
+          <div class="content">
+              <p>hello world</p>
+          </div>
+      </div>
+
+      <hr/>
+
+
+
+      <!-- Coronavirus explained -->
+
+      <!--update here-->
+      <div id="articleFrame">
+        <a href=""><h2>Coronavirus explained</h2>
+        <div class="row">
+          <div class="col-sm-3">
+            <a href="">
+            <img class="articleImage" src="https://ichef.bbci.co.uk/news/240/cpsprodpb/244F/production/_116159290_index_mass_testing_976-nc.png" alt="placeholder">
+            <p>Which areas will have mass testing for Covid variant?</p>
             </a>
           </div>
-        </div>
+          <div class="col-sm-3">
+            <a href="">
+              <img class="articleImage" src="https://ichef.bbci.co.uk/news/240/cpsprodpb/7155/production/_114931092_index_lockdown_lookup_v2_b_976.png" alt="placeholder">
+              <p>Postcode check: Find out the rules where you live</p>
+              </a>
+          </div>
 
-        <div class="col-sm-3">
-          <div id="footer-box4">
-            <a style="text-decoration:none; color: white;"  href="https://www.bbc.co.uk/bitesize/articles/zp2d4xs?xtor=CS8-1000-[Discovery_Cards]-[Multi_Site]-[SL02]-[PS_BITESIZE~N~~A_Learningfromlockdown]" target="_blank">
-              <div class="footer-content">
-                  <img class="footer-image footer-headline" src="https://ichef.bbci.co.uk/images/ic/272x153/p093t9wx.jpg" alt="Article image" width="260px" height="150px">
-                  <h3 style="max-width: 195px; margin-bottom: 40px; margin-top: 2px;">Top tips from previous lockdowns</h3>
-                  <p style="max-width: 195px; font-size: 11pt; margin-top: 0px; color: silver;">BBC TEACH</p>
+          
+          <div class="col-sm-3">
+            <a href="">
+              <img class="articleImage" src="https://ichef.bbci.co.uk/news/240/cpsprodpb/164F9/production/_112558319_index_schools_reopening_976-1.png" alt="placeholder">
+              <p>How soon will children return to school?</p>
+              </a>
+          </div>
+          <div class="col-sm-3">
+            <div class="articleContainer">
+              <p><a href="">How effective is the Oxford vaccine?</a></p>
+              <p style="border-bottom:white"><a href="">How is the BBC helping home-schooling families?</a></p> 
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+      <!--update end-->
+
+      <!-- Footer -->
+
+      <div class="social">
+        <h2> Find us here </h2>
+
+        <div id = "s-box">
+          <div class="row">
+            <div class="col-sm-6">
+              <br>
+              <div class="col-sm-2">
+                <img class="sLogos" src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="twitter">
               </div>
-            </a>
+              <div class="col-sm-2">
+                <img class="sLogos" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTImj5adg1sNvD0iCEQcjIGr-CZGuiX1or61w&usqp=CAU" alt="">
+              </div>
+              <div class="col-sm-2">
+                <img class="sLogos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="insta">
+              </div>
+            </div>
+            <div class="col-sm-3"> 
+              <h3><span><img class="newsLogos" src="http://cdn.onlinewebfonts.com/svg/img_64214.png" alt="news app logo"></span> | NEWS DAILY</h3>
+              <p><a>Get news from the BBC in your inbox each weekday morning</a></p>
+              </a>
+              <br>
+              <p>Email us at <a>haveyoursay@bbc.co.uk</a></p>
+              <p>Send an SMS or MMS to <a>61124</a></p>
+            </div>
+            <div class="col-sm-3"> 
+              <h3><span><img class="newsLogos" src="https://image.flaticon.com/icons/png/512/65/65680.png" alt="news app logo"></span> | NEWS APP</h3>
+              <p><a> Find out more about our BBC News App</a></p>
+              <br>
+              <p>Follow <a>Your Say on Twitter</a></p>
+              <p><a>Why you can trust BBC News</a></p>
+            </div>
+          </div>
+      </div>
+
+      <br>
+
+      <!-- George footer -->
+
+      <div id=footer-main-box>
+        <div class="footer-content"></div> <!-- this class isn't present in CSS; remove -->
+
+        <div id="footer-box1">
+          <div class="footer-content">
+              <h3 style="font-size: 20pt;">Lockdown Learning</h3>
           </div>
         </div>
 
-        <div class="col-sm-3">
-          <div id="footer-box5">
-            <a style="text-decoration:none; color: white;"  href="https://www.bbc.co.uk/bitesize/articles/zsf3hcw?xtor=CS8-1000-[Discovery_Cards]-[Multi_Site]-[SL02]-[PS_BITESIZE~N~~A_ActiveKids]" target="_blank">
-              <div class="footer-content">
-                  <img class="footer-image footer-headline" src="https://ichef.bbci.co.uk/images/ic/272x153/p08k6crd.jpg" alt="Article image" width="260px" height="150px">
-                  <h3 style="max-width: 195px; margin-bottom: 40px; margin-top: 2px;">Six ways to get your kids active at home</h3>
-                  <p style="max-width: 195px; font-size: 11pt; margin-top: 0px; color: silver;">BBC BITESIZE</p>
-              </div>
-            </a>
+        <div class="row">
+
+          <div class="col-sm-3">
+            <div id="footer-box2">
+              <a style="text-decoration:none; color: white;"  href="https://www.bbc.co.uk/iplayer/group/p093cv85?xtor=CS8-1000-[Discovery_Cards]-[Multi_Site]-[SL02]-[PS_IPLAYER~N~~P_LockdownLearning]" target="_blank">
+                <div class="footer-content">
+                    <img class="footer-image footer-headline" src="https://ichef.bbci.co.uk/images/ic/272x153/p07jbxwv.jpg" alt="Article image" width="260px" height="150px">
+                    <h3 style="max-width: 195px; margin-bottom: 40px; margin-top: 2px;">Lessons to bring home schooling to life</h3>
+                    <p style="max-width: 195px; font-size: 11pt; margin-top: 0px; color: silver;">BBC IPLAYER</p>
+                </div>
+              </a> 
+            </div>
           </div>
-        </div>
 
-      </div> <!-- End of row -->
+          <div class="col-sm-3">
+            <div id="footer-box3">
+              <a style="text-decoration:none; color: white;"  href="https://www.bbc.co.uk/iplayer/episode/m000rqwl/workout-the-wright-way-series-1-episode-1-muscle-movers-week-1?xtor=CS8-1000-[Discovery_Cards]-[Multi_Site]-[SL02]-[PS_IPLAYER~N~~P_Workoutthewrightway_ep1]" target="_blank">
+                <div class="footer-content">
+                    <img class="footer-image footer-headline" src="https://ichef.bbci.co.uk/images/ic/704xn/p095hgm8.png" alt="Article image" width="260px" height="150px">
+                    <h3 style="max-width: 195px; margin-bottom: 40px; margin-top: 2px;">Get fit and Workout the Wright way!</h3>
+                    <p style="max-width: 195px; font-size: 11pt; margin-top: 0px; color: silver;">BBC IPLAYER</p>
+                </div>
+              </a>
+            </div>
+          </div>
 
-    </div> <!-- End of orange box -->
+          <div class="col-sm-3">
+            <div id="footer-box4">
+              <a style="text-decoration:none; color: white;"  href="https://www.bbc.co.uk/bitesize/articles/zp2d4xs?xtor=CS8-1000-[Discovery_Cards]-[Multi_Site]-[SL02]-[PS_BITESIZE~N~~A_Learningfromlockdown]" target="_blank">
+                <div class="footer-content">
+                    <img class="footer-image footer-headline" src="https://ichef.bbci.co.uk/images/ic/272x153/p093t9wx.jpg" alt="Article image" width="260px" height="150px">
+                    <h3 style="max-width: 195px; margin-bottom: 40px; margin-top: 2px;">Top tips from previous lockdowns</h3>
+                    <p style="max-width: 195px; font-size: 11pt; margin-top: 0px; color: silver;">BBC TEACH</p>
+                </div>
+              </a>
+            </div>
+          </div>
 
-    <!-- End of George footer -->
+          <div class="col-sm-3">
+            <div id="footer-box5">
+              <a style="text-decoration:none; color: white;"  href="https://www.bbc.co.uk/bitesize/articles/zsf3hcw?xtor=CS8-1000-[Discovery_Cards]-[Multi_Site]-[SL02]-[PS_BITESIZE~N~~A_ActiveKids]" target="_blank">
+                <div class="footer-content">
+                    <img class="footer-image footer-headline" src="https://ichef.bbci.co.uk/images/ic/272x153/p08k6crd.jpg" alt="Article image" width="260px" height="150px">
+                    <h3 style="max-width: 195px; margin-bottom: 40px; margin-top: 2px;">Six ways to get your kids active at home</h3>
+                    <p style="max-width: 195px; font-size: 11pt; margin-top: 0px; color: silver;">BBC BITESIZE</p>
+                </div>
+              </a>
+            </div>
+          </div>
 
-</main>
+        </div> <!-- End of row -->
 
+      </div> <!-- End of orange box -->
 
+      <!-- End of George footer -->
+
+  </main>
 
 </body>
+
+</html>
