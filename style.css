@@ -369,11 +369,12 @@ body {
 body #footer-main-box {
   background-color: rgb(255,100,0);
   /*position: fixed;*/
-  top: 20px;
+  padding-top: 5px;
+  top: 30px;
   bottom: 30px;
   left: 0px;
   right: 0px;
-  height: 350px; 
+  height: 400px; 
 }
 
 body #footer-box1 {
@@ -431,11 +432,16 @@ body #footer-box5 {
 }
 
 .dropdown__content {
+  margin-top: 20px;
+  margin-bottom: 10px;
   display: none;
 }
 
-.dropdown__content-options:hover {
-  background-color: black;
+.dropdown__content-options:hover, a {
+  background-color: rgb(68, 68, 68);
+  color: white;
+  text-decoration: none;
+  padding: 2px; 
 }
 
 /* Asel scroll to top button */
@@ -448,4 +454,9 @@ body #footer-box5 {
   background-color: red;
   color: white;
   border: none;
+}
+
+#moreDrop{
+  margin: 0 auto;
+  max-width: 1200px;
 }
